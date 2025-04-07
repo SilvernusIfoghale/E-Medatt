@@ -3,3 +3,7 @@
 @theme inline {
   --font-main: var(--font-inter);
 }
+
+@theme {
+  --color-gray-secondary-text: #969696;
+}
