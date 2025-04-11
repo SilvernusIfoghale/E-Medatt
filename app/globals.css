@@ -5,5 +5,10 @@
 }
 
 @theme {
+  --color-gray-primary-text: #323232;
   --color-gray-secondary-text: #969696;
+  --color-primary-100: #0d192f;
+  --color-primary-white: #ffffff;
+  --color-primary-base: #417beb;
+  --color-primary-10: #d9e5fb;
 }

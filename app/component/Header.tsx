@@ -4,7 +4,7 @@ import phone from "@/public/icons/phone-icon.png";
 
 export const Header = () => {
   return (
-    <header className="hidden  bg-white w-full h-10 sm:flex gap-5 text-gray-secondary-text text-xs sm:text-sm pl-5 sm:pl-20 py-4">
+    <header className="hidden bg-primary-white w-full h-10 sm:flex gap-5 text-gray-secondary-text text-xs  pl-5 sm:pl-20 py-4">
       <div className="flex justify-center items-center gap-2">
         <Image src={email} width={16} height={16} alt="email icon" />
         <p>contact@e-medatt.com</p>
