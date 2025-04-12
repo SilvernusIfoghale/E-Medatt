@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative flex  justify-center items-center bg-primary-100">
+    <nav className="relative flex  justify-center items-center bg-primary-100 z-10">
       <div className=" w-[90%] flex py-4 justify-between items-center    text-primary-white shadow-md text-sm font-light">
         <div className="bg-primary-white text-xs text-primary-base font-bold rounded-3xl ">
           <Link href="/" className="flex items-center gap-2 py-1 px-2">
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
         <div
           className={`${mobileNav ? "flex" : "hidden"}  sm:flex items-center  `}
         >
-          <div className="absolute right-0 top-14 h-[calc(100vh-56px)] sm:h-auto bg-primary-100  sm:relative sm:right-auto sm:top-auto  flex gap-8 sm:gap-0.5 text-center flex-col sm:flex-row sm:justify-center sm:items-center sm:space-x-4 w-[90%] sm:w-auto pt-10 sm:pt-0">
+          <div className="absolute right-0 top-14 h-[120vh] sm:h-auto bg-primary-100  sm:relative sm:right-auto sm:top-auto  flex gap-8 sm:gap-0.5 text-center flex-col sm:flex-row sm:justify-center sm:items-center sm:space-x-4 w-[90%] sm:w-auto pt-10 sm:pt-0">
             <Link
               href="/"
               className={`${
