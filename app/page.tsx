@@ -10,6 +10,13 @@ import workingProfessionals from "@/public/images/workingProfessionals.png";
 import mentalPatients from "@/public/images/mentalPatient.png";
 import youngAdult from "@/public/images/youngAdults.png";
 import parents from "@/public/images/parent.png";
+import consultant from "@/public/images/consultant.png";
+import check from "@/public/icons/check.png";
+import key from "@/public/icons/key.png";
+import stethoscope from "@/public/icons/stethoscope.png";
+import record from "@/public/icons/record.png";
+import calender from "@/public/icons/calender.png";
+import Step from "./component/Step";
 
 interface HealthCardProps {
   photo: StaticImageData;
@@ -17,6 +24,16 @@ interface HealthCardProps {
   alt: string;
   description: string;
   paint: string;
+}
+
+interface StepProps {
+  icon: StaticImageData;
+  step: string;
+  title: string;
+  description: string;
+  mt: string;
+  nextArrow: boolean;
+  transform: boolean;
 }
 
 export default function Home() {
@@ -70,6 +87,50 @@ export default function Home() {
       paint: "bg-success-10",
     },
   ];
+
+  const stepCardData: StepProps[] = [
+    {
+      nextArrow: true,
+      transform: false,
+      mt: "mt-0",
+      step: "01",
+      icon: key,
+      title: "Register or Log in",
+      description:
+        "Sign up for a new account or log in to access personalized healthcare services. It's quick and easy.",
+    },
+    {
+      nextArrow: true,
+      transform: true,
+      mt: "sm:mt-[6rem]",
+      step: "02",
+      icon: stethoscope,
+      title: "Choose a Doctor",
+      description:
+        "Select the service that suits your needs, from virtual consultations to specialist appointments. We offer a range of options for you.",
+    },
+    {
+      nextArrow: true,
+      transform: false,
+      mt: "sm:mt-[12rem]",
+      step: "03",
+      icon: calender,
+      title: "Book an Appointment",
+      description:
+        "Connect instantly with a licensed doctor through secure video calls. Get expert advice and treatment from the comfort of your home.",
+    },
+    {
+      nextArrow: false,
+      transform: false,
+      mt: "sm:mt-[18rem] ",
+      step: "04",
+      icon: record,
+      title: "Manage Records",
+      description:
+        "Easily access your medical records anytime and schedule follow-ups as needed. Stay organized and in control of your health journey.",
+    },
+  ];
+
   return (
     <main className="w-full bg-primary-white flex flex-col items-center">
       {/* hero section  */}
@@ -136,6 +197,83 @@ export default function Home() {
               alt={item.alt}
               description={item.description}
               paint={item.paint}
+            />
+          ))}
+        </div>
+      </div>
+      {/* Our Features  */}
+      <div className=" relative w-[90%] flex flex-col  justify-center  py-16">
+        <div className="flex flex-col sm:flex-row gap-5  items-center justify-between">
+          <div className="w-full sm:w-[45%]">
+            <Image src={consultant} alt="Consultant Doctor" />
+          </div>
+          <div className="w-full sm:w-[45%]">
+            <h3 className=" text-lg md:text-xl lg:text-2xl  font-bold ">
+              Our Features
+            </h3>
+            <p className="text-xs py-4 ">
+              Experience convenient and affordable healthcare at your
+              fingertips. From easy scheduling to secure telehealth, our
+              features make accessing quality care simple and efficient.
+            </p>
+            <div className="flex flex-col gap-3 pt-3">
+              <div className="flex items-center gap-2 text-xs">
+                <Image src={check} alt="check icon" />
+                <p>Easy Appointment Scheduling</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Image src={check} alt="check icon" />
+                <p>Access to Certified Healthcare Providers</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Image src={check} alt="check icon" />
+                <p>Telehealth Services</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Image src={check} alt="check icon" />
+                <p>Medical Records Management</p>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <Image src={check} alt="check icon" />
+                <p>Accessible and Affordable Healthcare</p>
+              </div>
+              <div className="relative flex flex-col sm:flex-row  gap-5 text-xs pt-2">
+                <button className="bg-primary-base text-primary-white py-1.5 px-4 rounded-lg hover:scale-105 duration-500 cursor-pointer">
+                  Book Appointment
+                </button>
+                <button className="flex justify-center items-center cursor-pointer hover:scale-105 duration-500 border-2 sm:border-none border-gray-20 py-1.5 rounded-lg">
+                  Learn more
+                  <Image src={arrow} alt="arrow" width={12} height={12} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* How it Works */}
+      <div className=" relative w-[90%] flex flex-col mt  justify-center  pb-16">
+        <div className="flex justify-center sm:mb-[-6rem] mb-5 text-center ">
+          <div className="w-1/2">
+            <h3 className=" text-lg md:text-xl lg:text-2xl  font-bold ">
+              How It Works
+            </h3>
+            <p className="text-xs py-4 ">
+              Follow these easy steps to enjoy quick and seamless <br /> access
+              to certified doctors on E-Medatt.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-5 md:gap-10 lg:gap-24  items-center text-center sm:text-left justify-between">
+          {stepCardData.map((item) => (
+            <Step
+              transform={item.transform}
+              key={item.step}
+              nextArrow={item.nextArrow}
+              mt={item.mt}
+              step={item.step}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
             />
           ))}
         </div>
