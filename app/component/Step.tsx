@@ -28,7 +28,7 @@ export default function Step({
       </h2>
       <Image src={icon} alt="icon" width={30} className="mx-auto sm:mx-0" />
       <h3 className="text-sm  font-bold py-2">{title}</h3>
-      <p className="text-xs">{description}</p>
+      <p className="text-xs font-light">{description}</p>
       {nextArrow && (
         <Image
           src={nextPointer}
