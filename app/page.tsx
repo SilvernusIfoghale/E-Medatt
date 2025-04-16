@@ -11,6 +11,13 @@ import { accordionData } from "./utils/Accordion";
 import Accordion from "./component/Accordion";
 import { stepCardData } from "./utils/StepCard";
 import { headerCardData } from "./utils/HeaderCard";
+import applestore from "@/public/icons/applestore.png";
+import playstore from "@/public/icons/playstore.png";
+import leftgrid from "@/public/icons/leftgrid.png";
+import rightgrid from "@/public/icons/rightgrid.png";
+import mouse from "@/public/icons/mouse.png";
+import spiralarrow from "@/public/icons/spiralarrow.png";
+import star from "@/public/icons/star.png";
 
 export default function Home() {
   return (
@@ -183,8 +190,71 @@ export default function Home() {
           </div>
           <div className="w-full sm:w-[70%] md:w-[60%] lg:w-[45%] flex flex-col gap-5 justify-center items-center sm:items-start">
             {accordionData.map(({ title, content }) => (
-              <Accordion title={title} content={content} />
+              <Accordion key={title} title={title} content={content} />
             ))}
+          </div>
+        </div>
+      </div>
+      {/* Download our app  */}
+      <div className=" relative w-[90%] flex flex-col mb-[-40px] sm:mb-[-20px] z-10  justify-center  sm:pb-16">
+        <div className="flex justify-center sm:mb-[-6rem] mt-10 text-center ">
+          <div className="bg-primary-base w-full h-96 rounded-lg relative text-center text-primary-white overflow-hidden">
+            <Image
+              src={leftgrid}
+              alt="left-grid background"
+              className="absolute  w-[21rem] inset-y-0 left-0"
+            />
+            <div className="flex flex-col justify-center items-center relative h-full">
+              <div className=" relative">
+                <Image
+                  src={star}
+                  alt="star icon"
+                  className="w-12 sm:w-16 absolute left-[-30px] sm:left-[-48px] top-[-15px] sm:top-[-25px]"
+                />
+                <h4 className="sm:hidden text-2xl  sm:text-2xl  font-bold  py-3">
+                  Download the App Now!
+                </h4>
+                <p className="hidden sm:block text-xs sm:text-sm font-light py-3 ">
+                  Download our app today and take the <br /> first step toward
+                  optimal health!
+                </p>
+              </div>
+              <div className="relative">
+                <p className="sm:hidden text-lg font-light py-5 ">
+                  Download our app today and take the <br /> first step toward
+                  optimal health!
+                </p>
+                <h4 className="hidden sm:block  text-xl sm:text-2xl  font-bold py-5 ">
+                  Download the App Now!
+                </h4>
+                <Image
+                  src={spiralarrow}
+                  alt="spiral icon "
+                  className="w-12 sm:w-16 absolute inset-y-0 right-[-40px] sm:right-[-100px] top-[75px] sm:top-[-20px]"
+                />
+              </div>
+              <div className="relative flex flex-col-reverse sm:flex-row gap-5 justify-center w-[90%] sm:w-fit">
+                <button className="w-full sm:w-auto flex  justify-center items-center text-[0.65rem]  cursor-pointer hover:scale-105 duration-500  bg-grey-100 text-primary-white   py-3 sm:py-2 px-3 rounded-md mx-auto sm:mx-0 gap-3 z-10">
+                  <Image src={playstore} alt="arrow" width={12} height={12} />
+                  Download for Android
+                </button>
+                <button className="w-full sm:w-auto  flex  justify-center items-center text-[0.65rem]   cursor-pointer hover:scale-105 duration-500  bg-grey-100 text-primary-white   py-3 sm:py-2 px-3 rounded-md mx-auto sm:mx-0 gap-3 z-10">
+                  <Image src={applestore} alt="arrow" width={12} height={12} />
+                  Download for iOS
+                </button>
+                <Image
+                  src={mouse}
+                  alt="mouse icon "
+                  className="w-20 sm:w-28 absolute left-[-50px] sm:left-[-110px] bottom-[-60px] sm:bottom-[-95px]"
+                />
+              </div>
+            </div>
+
+            <Image
+              src={rightgrid}
+              alt="right-grid background"
+              className="absolute w-[21rem]   inset-y-0 right-0"
+            />
           </div>
         </div>
       </div>

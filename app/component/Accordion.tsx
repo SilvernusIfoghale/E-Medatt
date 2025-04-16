@@ -13,7 +13,6 @@ export default function Accordion({ title, content }: AccordionProps) {
       className={`w-[90%] sm:w-[80%] border-2 border-gray-20 p-4 rounded-xl ${
         isActive && "border-gray-primary-text"
       }`}
-      key={Math.random()}
     >
       <div
         className=" flex justify-between gap-5 "
