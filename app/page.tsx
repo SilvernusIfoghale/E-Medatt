@@ -202,7 +202,7 @@ export default function Home() {
             <Image
               src={leftgrid}
               alt="left-grid background"
-              className="absolute  w-[21rem] inset-y-0 left-0"
+              className="absolute w-[11rem]  sm:w-[21rem] inset-y-20 sm:inset-y-0 left-0"
             />
             <div className="flex flex-col justify-center items-center relative h-full">
               <div className=" relative">
@@ -253,7 +253,7 @@ export default function Home() {
             <Image
               src={rightgrid}
               alt="right-grid background"
-              className="absolute w-[21rem]   inset-y-0 right-0"
+              className="absolute w-[11rem]  sm:w-[21rem] inset-y-20 sm:inset-y-0 right-0"
             />
           </div>
         </div>
