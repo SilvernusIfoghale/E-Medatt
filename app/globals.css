@@ -3,3 +3,18 @@
 @theme inline {
   --font-main: var(--font-inter);
 }
+
+@theme {
+  --color-gray-primary-text: #323232;
+  --color-gray-secondary-text: #969696;
+  --color-gray-20: #dcdcdc;
+  --color-grey-100: #1e1e1e;
+  --color-primary-100: #0d192f;
+  --color-primary-white: #ffffff;
+  --color-primary-base: #417beb;
+  --color-primary-10: #d9e5fb;
+  --color-success-10: #dbefdc;
+  --color-warning-10: #fff3cd;
+  --color-error-10: #ffe2df;
+  --color-error-20: #f4e0ff;
+}
