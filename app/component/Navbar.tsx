@@ -28,10 +28,14 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative flex  justify-center items-center bg-primary-100 z-10">
+    <nav className="relative flex  justify-center items-center bg-primary-100 z-50">
       <div className=" w-[90%] flex py-4 justify-between items-center    text-primary-white shadow-md text-sm font-light">
         <div className="bg-primary-white text-xs text-primary-base font-bold rounded-3xl ">
-          <Link href="/" className="flex items-center gap-2 py-1 px-2">
+          <Link
+            href="/"
+            className="flex items-center gap-2 py-1 px-2"
+            onClick={() => setMobileNav(false)}
+          >
             <Image src={logo} width={18} height={18} alt="E-Medatt logo" />
             <p>E-MEDATT</p>
           </Link>
@@ -46,6 +50,7 @@ const Navbar: React.FC = () => {
               className={`${
                 pathName === "/" ? "font-medium" : "font-light"
               } hover:font-medium w-14 mx-auto`}
+              onClick={() => setMobileNav(false)}
             >
               Home
             </Link>
@@ -54,6 +59,7 @@ const Navbar: React.FC = () => {
               className={`${
                 pathName === "/about" ? "font-medium" : "font-light"
               } hover:font-medium w-14 mx-auto`}
+              onClick={() => setMobileNav(false)}
             >
               About
             </Link>
@@ -80,36 +86,42 @@ const Navbar: React.FC = () => {
                   <Link
                     href="/telehealth"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Telehealth Consultations
                   </Link>
                   <Link
                     href="/specialist-care"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Specialist Care
                   </Link>
                   <Link
                     href="/medical-records"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Medical Records Management
                   </Link>
                   <Link
                     href="/medical-tests"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Medical Tests & Diagnostics
                   </Link>
                   <Link
                     href="/wellness-program"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Wellness Program
                   </Link>
                   <Link
                     href="/appointment-scheduling"
                     className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    onClick={() => setMobileNav(false)}
                   >
                     Appointment Scheduling
                   </Link>
@@ -121,6 +133,7 @@ const Navbar: React.FC = () => {
               className={`${
                 pathName === "/pricing" ? "font-medium" : "font-light"
               } hover:font-medium w-14 mx-auto`}
+              onClick={() => setMobileNav(false)}
             >
               Pricing
             </Link>
@@ -144,6 +157,7 @@ const Navbar: React.FC = () => {
                 className={`${
                   pathName === "/login" ? "font-medium" : "font-light"
                 } hover:font-medium w-full`}
+                onClick={() => setMobileNav(false)}
               >
                 Login
               </Link>
@@ -152,6 +166,7 @@ const Navbar: React.FC = () => {
                 className={`${
                   pathName === "/signup" ? "font-medium" : "font-light"
                 }  bg-primary-base hover:bg-primary-10 hover:text-gray-primary-text p-3 rounded-lg`}
+                onClick={() => setMobileNav(false)}
               >
                 Sign Up
               </Link>
@@ -169,6 +184,7 @@ const Navbar: React.FC = () => {
             className={`${
               pathName === "/login" ? "font-medium" : "font-light"
             } hover:font-medium w-10`}
+            onClick={() => setMobileNav(false)}
           >
             Login
           </Link>
@@ -177,6 +193,7 @@ const Navbar: React.FC = () => {
             className={`${
               pathName === "/signup" ? "font-medium" : "font-light"
             }  bg-primary-base hover:bg-primary-10 hover:text-gray-primary-text p-2 rounded-xl`}
+            onClick={() => setMobileNav(false)}
           >
             Sign Up
           </Link>
