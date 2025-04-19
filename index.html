@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Medatt | Medical Appointment System</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">E-Medatt</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/doctor.html">Doctors</a></li>
-                <li><a href="pages/patiant.html">Patiants</a></li>
-            </ul>                
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <h1>Welcome to E-Medatt</h1>
-            <p></p>Everything you need for your health in one place</p>
-            <div class="cta-buttons">
-                <a href="pages/doctors.html" class="btn">Find a Doctor</a>
-                <a href="pages/patiants.html" class="btn">I'm a patiant</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Medatt - Onine Tele-Medicine Application</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="top-bar">
+                <div class="contact-info">
+                    <a href="mailto:contact@e-medatt.com">contact@e-medatt.com</a>
+                    <a href="tel:(414)850-0417">(414) 850-0417</a>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 E-Medatt. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+            <nav class="main-nav">
+                <div class="logo">
+                    <img src="images/logo.png" alt="E-Medatt Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+                <div class="auto-button">
+                    <button class="login">Login</button>
+                    <button class="sign-up">Sign up</button>
+                </div>
+            </nav>
+        </header>
+        <!-- Hero Section -->
+         <section class="hero">
+            <div class="hero-content">
+                <h1>Your Path to Better Health is Just One Click Away</h1>
+                <p>Set aside the inconvenience of scheduling appointments!
+                <br>Get in touch with a doctor whenever it's convenient for you.
+                <br>Our network skilled and qualified doctors can provide you with
+                <br> first-class medical treatment.</p>
+                <button class="book-appointment">Book Appointment</button>
+                <a href="learn-more">Learn More</a>
+            </div>
+         </section>
+    </body>
