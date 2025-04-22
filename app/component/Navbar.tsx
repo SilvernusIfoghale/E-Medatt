@@ -85,7 +85,9 @@ const Navbar: React.FC = () => {
                 <div className="sm:absolute sm:left-0 sm:ml-10 sm:w-52 relative  bg-primary-white shadow-sm sm:rounded-md z-10 p-3">
                   <Link
                     href="/telehealth"
-                    className="block px-4 py-2 rounded-md hover:bg-primary-10"
+                    className={`${
+                      pathName === "/telehealth" ? "bg-primary-10" : "bg-none"
+                    } block px-4 py-2 mb-1 rounded-md hover:bg-primary-10`}
                     onClick={() => setMobileNav(false)}
                   >
                     Telehealth Consultations
