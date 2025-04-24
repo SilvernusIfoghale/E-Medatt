@@ -4,3 +4,35 @@
     --text-gray: #6B7280;
     --white: #FFFFFF;
 }
+
+/* Basic reset for styling consistency across browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation bar styling for header element */
+.top-bar {
+    background-color: var(--white);
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 14px;
+}
