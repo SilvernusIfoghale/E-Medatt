@@ -7,9 +7,44 @@ import ellipse from "@/public/icons/ellipse.png";
 import star from "@/public/icons/starBlue.png";
 import arrowBlue from "@/public/icons/arrowBlue.png";
 import Accordion from "../component/Accordion";
+import basic from "@/public/icons/basic.png";
+import pro from "@/public/icons/pro.png";
+import premium from "@/public/icons/premium.png";
+import checkBlue from "@/public/icons/checkBlue.png";
+import checkWhite from "@/public/icons/checkWhite.png";
+import arrowRightWhite from "@/public/icons/rightArrowWhite.png";
+import arrowRightBlue from "@/public/icons/rightArrowBlue.png";
 import { accordionPricingData } from "../utils/AccordionPricing";
+import PricingCard from "../component/PricingCard";
 
 export default function page() {
+  const itemsList1 = [
+    "1 user account",
+    "Access to certified health professionals",
+    "3 consultations per month (chat or call)",
+    "Access to medical records",
+    "Appointment scheduling",
+    "General health tips and wellness resources",
+    "24/7 support",
+  ];
+  const itemsList2 = [
+    "5 user account",
+    "Access to certified health professionals",
+    "10 consultations per month (chat or call)",
+    "Access to medical records",
+    "Appointment scheduling",
+    "Priority support",
+    "Chronic disease management resources",
+  ];
+  const itemsList3 = [
+    "Unlimited users",
+    "Unlimited consultations (chat or call)",
+    "Access to specialist doctors",
+    "Comprehensive medical records",
+    "Personalized health programs",
+    "Virtual health check-ups and reminders",
+    "24/7 premium customer support",
+  ];
   return (
     <section className="w-full flex flex-col items-center relative">
       <Image
@@ -46,7 +81,57 @@ export default function page() {
             />
           </div>
         </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+          <PricingCard
+            photo={basic}
+            alt="basic icon"
+            title="Personal"
+            subTitle="Basic"
+            description="Get essential healthcare services with the Basic Plan. Perfect for
+              individuals looking for affordable care"
+            price="#2,499"
+            duration=" /month"
+            included={itemsList1}
+            btn="Upgrade to Basic plan"
+            btnStyle=" bg-primary-base hover:opacity-5 text-white"
+            btnImage={arrowRightWhite}
+            checkImage={checkBlue}
+            paint="bg-white shadow-sm"
+          />
+          <PricingCard
+            photo={pro}
+            alt="pro icon"
+            title="Family"
+            subTitle="Pro"
+            description="Ensure the well-being of your entire family with the Family Plan. Manage multiple users and enjoy more consultations"
+            price="#7,499"
+            duration=" /month"
+            included={itemsList2}
+            btn="Upgrade to Family plan"
+            btnStyle=" bg-white hover:opacity-5 text-primary-base"
+            btnImage={arrowRightBlue}
+            checkImage={checkWhite}
+            paint="bg-gradient-to-r  from-[#437FF4] to-[#3268D0] text-white"
+          />
+
+          <PricingCard
+            photo={premium}
+            alt="premium icon"
+            title="All-inclusive"
+            subTitle="Premium"
+            description="Experience complete peace of mind with the Premium Plan. Enjoy unlimited consultations and access to specialists"
+            price="#12,499"
+            duration=" /month"
+            included={itemsList3}
+            btn="Upgrade to Premium plan"
+            btnStyle=" bg-primary-base hover:opacity-5 text-white"
+            btnImage={arrowRightWhite}
+            checkImage={checkBlue}
+            paint="bg-white shadow-sm"
+          />
+        </div>
       </div>
+
       {/* FAQs  */}
       <div className="w-full pt-5 pb-16 mb-8">
         <div className="w-full flex flex-col sm:flex-row items-center justify-between sm:mb-[-6rem] mb-5 gap-10 ">
