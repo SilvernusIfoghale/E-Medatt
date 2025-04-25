@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-MEDATT - Patient Dashboard</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="patient.html" class="active">Appointments</a>
+            <a href="#">Health Records</a>
+            <a href="#">Messages</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="appointment">
+            <h2>Available Doctors</h2>
+            <div class="doctor-list">
+                <!-- E-Medatt Doctor card 01 -->
+                <div class="doctor-card">
+                    <img src="images/doctor1.png" alt="Dr. Mide Adams">
+                    <h3>Dr. Mide Adams</h3>
+                    <p>Specialty: Dentist</p>
+                    <button class="btn-primary book-btn" data-doctor="Dr. Mide Adams">Book Appointment</button>
+                </div>
+                <!-- E-Medatt Doctor card 02 -->
+                <div class="doctor-card">
+                    <img src="images/doctor2.png" alt="Dr. Sarah Johnson">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p>Specialty: Cardiologist</p>
+                    <button class="btn-primary book-btn" data-doctor="Dr. Sarah Johnson">Book Appointment</button>
+                </div>
+                <!-- E-Medatt Doctor card 03 -->
+                <div class="doctor-card">
+                    <img src="images/doctor3.png" alt="Dr. John Doe">
+                    <h3>Dr. John Doe</h3>
+                    <p>Specialty: General Practitioner</p>
+                    <button class="btn-primary book-btn" data-doctor="Dr. John Doe">Book Appointment</button>
+                </div>
+                <!-- E-Medatt Doctor card 04 -->
+                <div class="doctor-card">
+                    <img src="images/doctor4.png" alt="Dr. Jane Smith">
+                    <h3>Dr. Jane Smith</h3>
+                    <p>Specialty: Dermatologist</p>
+                    <button class="btn-primary book-btn" data-doctor="Dr. Jane Smith">Book Appointment</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 E-MEDATT. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/appointments.js"></script>
+</body>
+</html>
