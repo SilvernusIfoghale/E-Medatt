@@ -52,7 +52,7 @@ export default function page() {
         alt="ellipse"
         className="absolute left-[-50px] top-[-170px] rotate-180"
       />
-      <div className="w-[90%]">
+      <div className="w-[90%] ">
         <div className="text-center flex flex-col items-center  my-16 ">
           <div className="relative">
             <Image
@@ -131,6 +131,11 @@ export default function page() {
           />
         </div>
       </div>
+      <Image
+        src={ellipse}
+        alt="ellipse"
+        className="absolute bottom-[35rem] sm:bottom-[180px] right-[-70px] z-[-20]"
+      />
 
       {/* FAQs  */}
       <div className="w-full pt-5 pb-16 mb-8">
