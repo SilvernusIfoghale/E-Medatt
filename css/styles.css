@@ -76,6 +76,7 @@ h3 {
     background-color: transparent;
     border: 2px solid var(--primary-blue);
     color: var(--primary-blue);
+    text-decoration: none;
 }
 
 .btn-secondary:hover {
