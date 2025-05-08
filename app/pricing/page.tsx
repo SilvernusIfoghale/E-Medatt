@@ -46,7 +46,7 @@ export default function page() {
     "24/7 premium customer support",
   ];
   return (
-    <section className="w-full flex flex-col items-center relative">
+    <section className="w-full flex flex-col items-center relative overflow-x-hidden">
       <Image
         src={ellipse}
         alt="ellipse"
